@@ -183,7 +183,7 @@ PKG_CHECK_MODULES([INFORM7], [
 	glib-2.0 >= 2.44
 	gtk+-3.0 >= 3.16
 	gio-2.0 >= 2.30
-	gtksourceview-3.0
+	gtksourceview-4
 	webkit2gtk-4.0
 	gtkspell3-3.0
 	libxml-2.0

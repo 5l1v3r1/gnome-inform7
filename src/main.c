@@ -22,6 +22,7 @@
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
+#include <gtksourceview/gtksource.h>
 
 #include "app.h"
 #include "configfile.h"
@@ -49,6 +50,8 @@ main(int argc, char *argv[])
 #endif
 
 	/* g_mem_set_vtable(glib_mem_profiler_table); */
+
+	gtk_source_init();
 
 	GError *error = NULL;
 
@@ -100,6 +103,7 @@ main(int argc, char *argv[])
 
 	g_object_unref(theapp);
 	i7_search_window_free_index();
+	gtk_source_finalize();
 	/* g_mem_profile();*/
 	return returncode;
 }
